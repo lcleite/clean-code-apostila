@@ -4,7 +4,9 @@
 * [Test](content/TEST.md#test)
 
 * [Código Limpo]()
-* [Nomes]()
+* [A Importância dos Nomes](content/nomes/nomes.md)
+    * [Introdução](content/nomes/nomes.md#intro)
+    * [Utilizando Nomes Significativos](content/nomes/nomes.md#nomes-sig)
 * [Funcões]()
 * [Comentários]()
 * [Formatação]()
