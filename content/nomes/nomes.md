@@ -110,7 +110,7 @@ Vamos começar com um exemplo simples, uma função que copia dois vetores de ch
 
 {% label %}Exemplo de argumentos confusos{% endlabel %}
 ```java
-public static void copiarChars(char[] c1, char[] c2) {
+public static void copiaChars(char[] c1, char[] c2) {
     ...
 }
 ```
@@ -119,7 +119,7 @@ Nossa primeira dúvida ao olhar essa função é saber quem é o vetor base e qu
 
 {% label %}Exemplo de argumentos significativos{% endlabel %}
 ```java
-public static void copiarChars(char[] base, char[] destino) {
+public static void copiaChars(char[] base, char[] destino) {
     ...
 }
 ```
