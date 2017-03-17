@@ -179,36 +179,28 @@ private NumeroTelefone telefoneString;
 
 Certamente a variável correspondente a um numero de telefone foi escrita inicialmente com o tipo String, porém - em algum momento - a mudança foi necessária e o nome permaneceu o mesmo, podendo causar confusão no código.
 
-Outro ponto importante é que não precisamos de qualquer prefixo para diferenciar atributos da classe de outras variáveis. Prefixos como *m_* só poluem o código e rapidamente aprendemos a ignorá-los, pois não trazem nenhum benefício, principalmente com o avanço das IDEs e suas diferentes cores que nos ajudam no desenvolvimento.
+Outro ponto importante é que não precisamos de qualquer prefixo para diferenciar atributos da classe de outras variáveis. Prefixos como *m* só poluem o código e rapidamente aprendemos a ignorá-los, pois não trazem nenhum benefício, principalmente com o avanço das IDEs e suas diferentes cores que nos ajudam no desenvolvimento.
 
 {% label %}Exemplo de código bagunçado{% endlabel %}
 ```java
 ...
-private String m_dsc; // O texto de descrição
-...
-void setNome(String nome) {
-    m_dsc = nome;
-}
+private ScrollListener mScrollListener;
 ...
 ```
 
-{% label %}Exemplo de código limpo{% endlabel %}
-```java
-...
-private String descricao;
-...
-void setDescricao(String descricao) {
-    this.descricao = descricao;
-}
-...
-```
+Conforme aprendemos a ignorar o prefixo *m*, a leitura do código é prejudicada, já que a tendência é lermos *ScrollListener* tanto para a classe quanto para a variável.
 
 Vale a pena ressaltar que nossas suas classes devem ser pequenas, então não vamos perder o controle de suas variáveis e nem dos seus tipos.
 
-#### {#interface} Interfaces e Implementações
+#### {#interface} Interfaces e Implementações //Alterar o título? Pesquisar para ver se vale a pena falar de Impl
 
-Como toda regra tem sua exceção, ... (falar de Interface, Imp e Delegate/Protocol)
+Toda regra tem sua exceção,  
 
+(falar de Interface, Imp e Delegate/Protocol)
 
+Is I for “Interface” or “Impl” – haha
+(Esse comentário prova que esse I é ambíguo)
 
+Parando para pensar, faz sentido o nome da interface permanecer intacto
+Ex: View.OnClickListener vs View.OnClickListenerInterface
 
