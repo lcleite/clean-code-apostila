@@ -166,6 +166,49 @@ class DocumentoInscricao{
 
 Agora ficou muito mais fácil de entender, mesmo sem conhecimento prévio do sistema, que existe uma classe *DocumentoInscricao* relativa a algum documento de inscrição e que esse documento possui um carimbo de data de criação e da sua última modificação. Isso tudo foi possível apenas nomeando de maneira correta e significativa, tornando explícito qualquer sentido antes escondido.
 
+#### {#pre-suf} Prefixos e Sufixos
+
+Antigamente, os compiladores não checavam os tipos das variáveis e os programadores precisavam lembrar constantemente do tipo das suas variáveis declaradas. Para ajudar, era muito comum nomear variáveis e utilizar como sufixo o seu tipo. Hoje em dia, existem diversas IDEs que podem nos ajudar com esse tipo de problema, então não vale a pena utilizar esse tipo de nomenclatura e correr o risco de prejudicar o nosso código.
+
+{% label %}Exemplo de nome inconsistente{% endlabel %}
+```java
+...
+private NumeroTelefone telefoneString;
+...
+```
+
+Certamente a variável correspondente a um numero de telefone foi escrita inicialmente com o tipo String, porém - em algum momento - a mudança foi necessária e o nome permaneceu o mesmo, podendo causar confusão no código.
+
+Outro ponto importante é que não precisamos de qualquer prefixo para diferenciar atributos da classe de outras variáveis. Prefixos como *m_* só poluem o código e rapidamente aprendemos a ignorá-los, pois não trazem nenhum benefício, principalmente com o avanço das IDEs e suas diferentes cores que nos ajudam no desenvolvimento.
+
+{% label %}Exemplo de código bagunçado{% endlabel %}
+```java
+...
+private String m_dsc; // O texto de descrição
+...
+void setNome(String nome) {
+    m_dsc = nome;
+}
+...
+```
+
+{% label %}Exemplo de código limpo{% endlabel %}
+```java
+...
+private String descricao;
+...
+void setDescricao(String descricao) {
+    this.descricao = descricao;
+}
+...
+```
+
+Vale a pena ressaltar que nossas suas classes devem ser pequenas, então não vamos perder o controle de suas variáveis e nem dos seus tipos.
+
+#### {#interface} Interfaces e Implementações
+
+Como toda regra tem sua exceção, ... (falar de Interface, Imp e Delegate/Protocol)
+
 
 
 

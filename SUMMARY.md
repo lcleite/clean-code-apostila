@@ -10,6 +10,8 @@
     * [Evite Confusões](content/nomes/nomes.md#confusoes)
     * [Diferenças Significativas](content/nomes/nomes.md#diff)
     * [Não Use Abreviações](content/nomes/nomes.md#abrv) 
+    * [Prefixos e Sufixos](content/nomes/nomes.md#pre-suf)
+    * [Interfaces e Implementações](content/nomes/nomes.md#interface)
 * [Funcões]()
 * [Comentários]()
 * [Formatação]()
