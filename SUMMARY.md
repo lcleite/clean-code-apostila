@@ -11,7 +11,7 @@
     * [Diferenças Significativas](content/nomes/nomes.md#diff)
     * [Não Use Abreviações](content/nomes/nomes.md#abrv) 
     * [Prefixos e Sufixos](content/nomes/nomes.md#pre-suf)
-    * [Interfaces e Implementações](content/nomes/nomes.md#interface)
+    * [Seja Consistente](content/nomes/nomes.md#consistencia)
 * [Funcões]()
 * [Comentários]()
 * [Formatação]()
@@ -23,4 +23,8 @@
 * [Concorrência]()
 
 /* TODO: Searchable Names em Names na seção de Funções */
+/* TODO: Method Names em Names na seção de Funções */
+
+/* TODO: Class Names em Names na seção de Classes */
+
 

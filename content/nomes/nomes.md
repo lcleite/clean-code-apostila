@@ -189,18 +189,64 @@ private ScrollListener mScrollListener;
 ```
 
 Conforme aprendemos a ignorar o prefixo *m*, a leitura do código é prejudicada, já que a tendência é lermos *ScrollListener* tanto para a classe quanto para a variável.
-
 Vale a pena ressaltar que nossas suas classes devem ser pequenas, então não vamos perder o controle de suas variáveis e nem dos seus tipos.
 
-#### {#interface} Interfaces e Implementações //Alterar o título? Pesquisar para ver se vale a pena falar de Impl
+Existe um prefixo famoso para interfaces que nem sempre passa informação com clareza para os leitores do código. Por exemplo, o que podemos dizer sobre o nome *IAnimal*?
+Até onde sabemos, esse prefixo com a letra *i* maiúscula pode significa Interface ou Implementation. Devemos evitar esse tipo de codificação, mas caso julgue necessário diferenciar
+a interface da sua classe de implementação, utilize algum prefixo ou sufixo que não gere dúvidas e que seja escrito na classe de implementação; como por exemplo 
+*CAnimal* ou *AnimalImp*. É melhor deixar suas interfaces livres de codificação nos seus nomes, evitar distrações ou informações desnecessárias e não influenciar outros 
+desenvolvedores a criar um padrão de prefixo ou sufixo.
 
-Toda regra tem sua exceção,  
+Outro problema com prefixos são os prefixos de projeto. Imagine um sistema chamado "Sistema de Gambiarras Predominantes", dado pela sigla SGP. Se começarmos a criar classes como
+*SGPMensagem*, *SGPCliente*, *SGPRota* ... com o mesmo padrão de prefixo, nosso sistema fica poluído e vários efeitos negativos surgirão. Entre esses efeitos, podemos citar
+a perda de produtividade ao usar uma das melhores funcionalidades de uma IDE, o *autocomplete*, simplesmente por adicionar às classes um prefixo que não agrega nenhum valor.
+É bastante antiprodutivo ter que digitar sempre a sigla SGP para poder, então, localizar a classe que quer utilizar. Vale também ressaltar o aumento da dificuldade de identificar
+a classe que desejamos utilizar em uma lista que a ordem alfabética é significativa a partir da quarta letra. 
 
-(falar de Interface, Imp e Delegate/Protocol)
+##### Exceção
 
-Is I for “Interface” or “Impl” – haha
-(Esse comentário prova que esse I é ambíguo)
+Toda regra tem sua exceção. Existem casos onde sufixos são recomendados, já que irão facilitar a vida do desenvolvedor que lerá nosso código. Quando utilizamos algum 
+padrão de projeto, é muito mais fácil para o entendimento - e até construção - do código quando nomeamos interfaces ou classes com sufixos que representam um padrão.
 
-Parando para pensar, faz sentido o nome da interface permanecer intacto
-Ex: View.OnClickListener vs View.OnClickListenerInterface
+{% label %}Exemplo de nomenclatura para <i>design patterns</i>{% endlabel %}
+```java
+public interface CliqueListener { ... }
+
+public interface FormasGeometricasFactory { ... }
+
+public interface AlertaBuilder { ... }
+``` 
+
+Apenas lendo os nomes acima, conseguimos entender sem conhecimento prévio do sistema que existem três interfaces: uma que funciona como ouvinte de cliques, uma que funciona
+como uma fábrica de formas geométricas e um construtor por etapas específicas de um alerta.
+
+#### {#consistencia} Seja Consistente
+
+Devemos escolher um padrão para o nosso código e permanecer com ele ao longo de todo o nosso projeto. É prejudicial para o entendimento do nosso código quando utilizamos diferentes
+nomenclaturas para ações semelhantes.
+
+{% label %}Exemplo de métodos inconsistente{% endlabel %}
+```java
+public String getNome() { ... }
+
+public String recebeNome() { ... }
+
+public String obtemNome() { ... }
+``` 
+
+Qual é a diferença entre os três métodos acima? O método *getNome()* pode fazer parte dos *getters e setters* da class, mas e o *recebeNome()* e *obtemNome()*? 
+Qual é a diferença entre esses dois? Pior, pode ser que eles não tenham diferença alguma na sua funcionalidade. Seria melhor estabelecermos um padrão e ficar com o mesmo sempre.
+Caso exista diferença entre os três métodos, podemos separá-los por classes e sempre utilizar a nomenclatura *get*.
+
+Nosso padrão também deve ser aplicado nas classes que criamos.
+
+{% label %}Exemplo de classes inconsistente{% endlabel %}
+```java
+public class ProtocoloController { ... }
+
+public class DispositivoManager { ... }
+``` 
+
+*Manager* e *Controller* são duas palavras genéricas no meio de desenvolvimento de sistemas. Nem sempre é trivial explicar o que um dos dois faz, e ter esses dois nomes juntos pode
+complicar ainda mais, surgindo dúvidas como "O que faz um Controller e um Manager?" ou "Por que as duas classes não são um Controller ou um Manager?". 
 
