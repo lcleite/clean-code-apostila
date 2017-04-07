@@ -194,7 +194,7 @@ Vale a pena ressaltar que nossas suas classes devem ser pequenas, então não va
 Existe um prefixo famoso para interfaces que nem sempre passa informação com clareza para os leitores do código. Por exemplo, o que podemos dizer sobre o nome *IAnimal*?
 Até onde sabemos, esse prefixo com a letra *i* maiúscula pode significa Interface ou Implementation. Devemos evitar esse tipo de codificação, mas caso julgue necessário diferenciar
 a interface da sua classe de implementação, utilize algum prefixo ou sufixo que não gere dúvidas e que seja escrito na classe de implementação; como por exemplo
-*CAnimal* ou *AnimalImp*. É melhor deixar suas interfaces livres de codificação nos seus nomes, evitar distrações ou informações desnecessárias e não influenciar outros
+*AnimalImpl*. É melhor deixar suas interfaces livres de codificação nos seus nomes, evitar distrações ou informações desnecessárias e não influenciar outros
 desenvolvedores a criar um padrão de prefixo ou sufixo.
 
 Outro problema com prefixos são os prefixos de projeto. Imagine um sistema chamado "Sistema de Gambiarras Predominantes", dado pela sigla SGP. Se começarmos a criar classes como
