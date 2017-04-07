@@ -2,15 +2,15 @@
 
 #### {#intro} Introdução
 
-Estamos constantemente nomeando ao desenvolver um software. 
-Damos nomes para variáveis, funções, argumentos, classes, etc. 
+Estamos constantemente nomeando ao desenvolver um software.
+Damos nomes para variáveis, funções, argumentos, classes, etc.
 Falaremos a seguir sobre a importância dos bons nomes e como eles influenciam positivamente no seu código.
 
 #### {#nomes-sig} Utilizando Nomes Significativos
 
-Primeiramente, devemos ter em mente o quão grande é a importância de nomear no desenvolvimento de software. 
+Primeiramente, devemos ter em mente o quão grande é a importância de nomear no desenvolvimento de software.
 Bons nomes podem economizar muito tempo na leitura do seu código, e é por isso que você pode gastar sem problemas um tempinho a mais
-para garantir que está nomeando da melhor maneira possível. 
+para garantir que está nomeando da melhor maneira possível.
 
 {% label %}Exemplo de código{% endlabel %}
 ```java
@@ -24,7 +24,7 @@ public List<int[]> obtem() {
 }
 ```
 
-O código acima não é complexo, é pequeno, mas ainda assim temos dificuldade em dizer o que ele está fazendo. O que é *lista* e o que estamos armazenando nela? Qual é a importância do primeiro elemento, zero, de um item da *lista*? O que significa o valor *4*? Como posso usar a *List<int[]>* que está sendo retornada?  
+O código acima não é complexo, é pequeno, e ainda assim, temos dificuldade em dizer o que ele está fazendo. O que é *lista* e o que estamos armazenando nela? Qual é a importância do primeiro elemento, zero, de um item da *lista*? O que significa o valor *4*? Como posso usar a *List<int[]>* que está sendo retornada?  
 É muito difícil responder essas perguntas sem conhecimento prévio do ambiente em que o código acima está inserido. Está implícito que você
 deve ter conhecimento prévio e isso é um problema, pois qualquer desenvolvedor deve entender claramente o seu código, não importa se é novo ou antigo em um projeto.
 
@@ -44,10 +44,10 @@ public List<int[]> obtemPecasMarcadas() {
 }
 ```
 
-O código melhorado não está limpo, mas elimina quase tudo que antes estava implícito. Com isso, é facil enxergar que o problema não está na
-complexidade de um código, e sim na quantidade de coisas implícitas. Quanto mais coisas implícitas seu código possui, mais difícil é a sua leitura; seja para qualquer outro desenvolvedor, ou para você mesmo - o próprio autor - um tempo depois.  
+O código melhorado não está limpo, mas elimina quase tudo que antes estava implícito. Com isso, é fácil enxergar que o problema não está na
+complexidade de um código, e sim na quantidade de coisas implícitas. Quanto mais coisas implícitas seu código possui, mais difícil é a sua leitura; seja para qualquer outro desenvolvedor, ou para você mesmo – o próprio autor – um tempo depois.  
 
-Falaremos sobre código limpo com mais detalhes ao longo da apostila, mas para começarmos a desenvolver um olhar crítico sobre o nosso próprio código, segue um exemplo de código limpo. 
+Falaremos sobre código limpo com mais detalhes ao longo da apostila, mas para começarmos a desenvolver um olhar crítico sobre o nosso próprio código, segue um exemplo de código limpo.
 
 {% label %}Exemplo de código limpo{% endlabel %}
 ```java
@@ -67,7 +67,7 @@ public List<Peca> obtemPecasMarcadas() {
 #### {#confusoes} Evite Confusões
 
 Como desenvolvedores, não queremos dar falsas pistas sobre o entendimento do nosso código.
-Alguns nomes de variáveis podem mascarar ou até indicar uma ideia diferente da rotina escrita para outro desenvolvedor que está lendo. 
+Alguns nomes de variáveis podem mascarar ou até indicar uma ideia diferente da rotina escrita para outro desenvolvedor que está lendo.
 
 {% label %}Exemplo de nomes confusos{% endlabel %}
 ```java
@@ -131,12 +131,12 @@ Com a função escrita da maneira acima, com certeza não perderíamos tempo que
 {% label %}Exemplo de funções confusas{% endlabel %}
 ```java
 obtemContas();
-obtemContasAtivas(); 
-obtemContaAtiva(); 
+obtemContasAtivas();
+obtemContaAtiva();
 obtemInfoDeContaAtiva();
 ```
 
-O fato dos escopos das funções estarem reduzidos e os retornos omitidos no código acima, isso não possui uma relevância tão significativa assim. O que realmente importa é que embora tenhamos nomes diferentes nas quatro funções e, ainda assim, não temos de fato uma diferença de sentido entre elas. É como nomear duas classes, uma chamada *ContaInfo* e outra *ContaDado*; ambas possuem nomes diferentes, mas qual seria a diferença prática? 
+O fato dos escopos das funções estarem reduzidos e os retornos omitidos no código acima, isso não possui uma relevância tão significativa assim. O que realmente importa é que embora tenhamos nomes diferentes nas quatro funções e, ainda assim, não temos de fato uma diferença de sentido entre elas. É como nomear duas classes, uma chamada *ContaInfo* e outra *ContaDado*; ambas possuem nomes diferentes, mas qual seria a diferença prática?
 
 Caso você não tenha se convencido ainda por causa da falta de retorno das funções no exemplo acima, deve lembrar que no meio do código não teremos sempre o escopo disponível e teríamos que toda hora consultar sua declaração. Mesmo que as IDEs ajudem nessa consulta, é improdutivo ter fazer isso várias vezes ao longo do desenvolvimento, principalmente se a definição real está em outra camada do sistema.
 
@@ -177,7 +177,7 @@ private NumeroTelefone telefoneString;
 ...
 ```
 
-Certamente a variável correspondente a um numero de telefone foi escrita inicialmente com o tipo String, porém - em algum momento - a mudança foi necessária e o nome permaneceu o mesmo, podendo causar confusão no código.
+Certamente a variável correspondente a um número de telefone foi escrita inicialmente com o tipo String, porém – em algum momento – a mudança foi necessária e o nome permaneceu o mesmo, podendo causar confusão no código.
 
 Outro ponto importante é que não precisamos de qualquer prefixo para diferenciar atributos da classe de outras variáveis. Prefixos como *m* só poluem o código e rapidamente aprendemos a ignorá-los, pois não trazem nenhum benefício, principalmente com o avanço das IDEs e suas diferentes cores que nos ajudam no desenvolvimento.
 
@@ -193,20 +193,20 @@ Vale a pena ressaltar que nossas suas classes devem ser pequenas, então não va
 
 Existe um prefixo famoso para interfaces que nem sempre passa informação com clareza para os leitores do código. Por exemplo, o que podemos dizer sobre o nome *IAnimal*?
 Até onde sabemos, esse prefixo com a letra *i* maiúscula pode significa Interface ou Implementation. Devemos evitar esse tipo de codificação, mas caso julgue necessário diferenciar
-a interface da sua classe de implementação, utilize algum prefixo ou sufixo que não gere dúvidas e que seja escrito na classe de implementação; como por exemplo 
-*CAnimal* ou *AnimalImp*. É melhor deixar suas interfaces livres de codificação nos seus nomes, evitar distrações ou informações desnecessárias e não influenciar outros 
+a interface da sua classe de implementação, utilize algum prefixo ou sufixo que não gere dúvidas e que seja escrito na classe de implementação; como por exemplo
+*CAnimal* ou *AnimalImp*. É melhor deixar suas interfaces livres de codificação nos seus nomes, evitar distrações ou informações desnecessárias e não influenciar outros
 desenvolvedores a criar um padrão de prefixo ou sufixo.
 
 Outro problema com prefixos são os prefixos de projeto. Imagine um sistema chamado "Sistema de Gambiarras Predominantes", dado pela sigla SGP. Se começarmos a criar classes como
 *SGPMensagem*, *SGPCliente*, *SGPRota* ... com o mesmo padrão de prefixo, nosso sistema fica poluído e vários efeitos negativos surgirão. Entre esses efeitos, podemos citar
 a perda de produtividade ao usar uma das melhores funcionalidades de uma IDE, o *autocomplete*, simplesmente por adicionar às classes um prefixo que não agrega nenhum valor.
 É bastante antiprodutivo ter que digitar sempre a sigla SGP para poder, então, localizar a classe que quer utilizar. Vale também ressaltar o aumento da dificuldade de identificar
-a classe que desejamos utilizar em uma lista que a ordem alfabética é significativa a partir da quarta letra. 
+a classe que desejamos utilizar em uma lista que a ordem alfabética é significativa a partir da quarta letra.
 
 ##### Exceção
 
-Toda regra tem sua exceção. Existem casos onde sufixos são recomendados, já que irão facilitar a vida do desenvolvedor que lerá nosso código. Quando utilizamos algum 
-padrão de projeto, é muito mais fácil para o entendimento - e até construção - do código quando nomeamos interfaces ou classes com sufixos que representam um padrão.
+Toda regra tem sua exceção. Existem casos onde sufixos são recomendados, já que facilitarão a vida do desenvolvedor que lerá nosso código. Quando utilizamos algum
+padrão de projeto, é muito mais fácil para o entendimento – e até construção – do código quando nomeamos interfaces ou classes com sufixos que representam um padrão.
 
 {% label %}Exemplo de nomenclatura para <i>design patterns</i>{% endlabel %}
 ```java
@@ -215,7 +215,7 @@ public interface CliqueListener { ... }
 public interface FormasGeometricasFactory { ... }
 
 public interface AlertaBuilder { ... }
-``` 
+```
 
 Apenas lendo os nomes acima, conseguimos entender sem conhecimento prévio do sistema que existem três interfaces: uma que funciona como ouvinte de cliques, uma que funciona
 como uma fábrica de formas geométricas e um construtor por etapas específicas de um alerta.
@@ -232,9 +232,9 @@ public String getNome() { ... }
 public String recebeNome() { ... }
 
 public String obtemNome() { ... }
-``` 
+```
 
-Qual é a diferença entre os três métodos acima? O método *getNome()* pode fazer parte dos *getters e setters* da class, mas e o *recebeNome()* e *obtemNome()*? 
+Qual é a diferença entre os três métodos acima? O método *getNome()* pode fazer parte dos *getters e setters* da class, mas e o *recebeNome()* e *obtemNome()*?
 Qual é a diferença entre esses dois? Pior, pode ser que eles não tenham diferença alguma na sua funcionalidade. Seria melhor estabelecermos um padrão e ficar com o mesmo sempre.
 Caso exista diferença entre os três métodos, podemos separá-los por classes e sempre utilizar a nomenclatura *get*.
 
@@ -245,8 +245,7 @@ Nosso padrão também deve ser aplicado nas classes que criamos.
 public class ProtocoloController { ... }
 
 public class DispositivoManager { ... }
-``` 
+```
 
 *Manager* e *Controller* são duas palavras genéricas no meio de desenvolvimento de sistemas. Nem sempre é trivial explicar o que um dos dois faz, e ter esses dois nomes juntos pode
-complicar ainda mais, surgindo dúvidas como "O que faz um Controller e um Manager?" ou "Por que as duas classes não são um Controller ou um Manager?". 
-
+complicar ainda mais, surgindo dúvidas como "O que faz um Controller e um Manager?" ou "Por que as duas classes não são um Controller ou um Manager?".
