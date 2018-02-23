@@ -110,7 +110,7 @@ Vamos começar com um exemplo simples, uma função que copia dois vetores de ch
 
 {% label %}Exemplo de argumentos confusos{% endlabel %}
 ```java
-public static void copiaChars(char[] c1, char[] c2) {
+public static void copia(char[] c1, char[] c2) {
     ...
 }
 ```
@@ -189,7 +189,7 @@ private ScrollListener mScrollListener;
 ```
 
 Conforme aprendemos a ignorar o prefixo *m*, a leitura do código é prejudicada, já que a tendência é lermos *ScrollListener* tanto para a classe quanto para a variável.
-Vale a pena ressaltar que nossas suas classes devem ser pequenas, então não vamos perder o controle de suas variáveis e nem dos seus tipos.
+Vale a pena ressaltar que nossas classes devem ser pequenas, então não vamos perder o controle de suas variáveis e nem dos seus tipos.
 
 Existe um prefixo famoso para interfaces que nem sempre passa informação com clareza para os leitores do código. Por exemplo, o que podemos dizer sobre o nome *IAnimal*?
 Até onde sabemos, esse prefixo com a letra *i* maiúscula pode significa Interface ou Implementation. Devemos evitar esse tipo de codificação, mas caso julgue necessário diferenciar
