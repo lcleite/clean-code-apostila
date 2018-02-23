@@ -77,7 +77,7 @@ private int nulo = -1;
 ...
 ```
 
-As variáveis *rm*, *cd* e *ls* têm nomes de comandos Unix amplamente usados e para o código desenvolvido, são nomes curtos e sem significado algum. A tendência é que, por esse motivo, o desenvolvedor que está lendo o código associe automaticamente o propósito dessas variáveis no código com a funcionalidade desses comandos conhecidos.
+As variáveis *rm*, *cd* e *ls* têm nomes de comandos Unix amplamente usados, entretanto para o código desenvolvido são nomes curtos e sem significado algum. A tendência é que, por esse motivo, o desenvolvedor que está lendo o código associe automaticamente o propósito dessas variáveis no código com a funcionalidade desses comandos conhecidos.
 
 O caso da variável *nulo* é simplesmente visual. As palavras *nulo* e *null* são muito parecidas, diferenciadas apenas pela sua última letra. Constantemente quando estamos lendo, não lemos uma palavra inteira e a proximidade entre o nome da variável e a palavra protegida *null* pode causar desentendimento no nosso código.
 
